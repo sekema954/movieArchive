@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --btn-hover:rgb(181, 132, 42);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+
+.signup-container{
+    max-width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgb(0,0,0,0.4), rgb(0,0,0,0.4)), url(images/thumb-1920-1322308.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.right-nav-wrapper>div{
+    display: inline-block;
+}
+
+nav select{
+    width: 100px;
+    height: 35px;
+}
+
+.sign-up-btn button{
+    width: 100px;
+    height: 35px;
+    background-color: orange;
+    border: solid white 1px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    transition: all .50s;
+}
+
+.sign-up-btn button:hover{
+    background-color: var(--btn-hover);
+}
+
+.logo h1{
+    color: white;
+    font-weight: 900;
+}
+
+
+.logo span{
+    color: orange;
+}
+
+@media(max-width:411px) {
+    .logo h1{
+        font-size: 20px;
+    }
+
+    .sign-up-btn button, nav select{
+        width: 60px;
+        height: 25px;
+    }
+
+    .signup-title h1{
+        font-size: 20px;
+    }
+
+    .enter-email-btn button{
+        height: 45px !important;
+    }
+}
+
+.signup-sub p{
+    color: rgb(186, 183, 183)
+}
+
+
+/****sign up center card***/
+
+.signup-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-card-wrapper>div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: 20px;
+}
+
+.signup-card-wrapper{
+    width: 700px;
+}
+
+#signup-form{
+    display: flex;
+    justify-content: center;
+    padding: 0 30px 0 30px;
+}
+
+#signup-form input[type=email]{
+    width: 100%;
+    height: 56px;
+    padding: 0 20px 0 20px;
+    background-color: transparent;
+    border: solid white;
+    border-radius: 6px;
+    color: white;
+}
+
+.email-div{
+    width: 100%;
+}
+
+
+#signup-form input[type=email]::placeholder{
+    color: white;
+}
+
+.enter-email-btn{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.enter-email-btn button{
+    font-size: 20px;
+    width: 160px;
+    height: 56px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    border: solid white 1px;
+    border-radius: 6px;
+    transition: all .50s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enter-email-btn  button:hover{
+    background-color: var(--btn-hover);
+}
+
+.enter-email-btn .fa-angle-right{
+    font-size: 35px;
+    margin-left: 10px;
+}
+ 
+.enter-email-btn a{
+    text-decoration: none;
+}
+
+
+
+/***setup container***/
+
+#setup-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setup-wrapper{
+    width: 335px;
+    height: 500px;
+    margin-top: 100px;
+    padding: 0 0 35px;
+}
+
+.setup-context-wrapper>div{
+    margin: 20px;
+}
+
+.steps{
+    padding: 0 0 0 20px;
+    color: gray;
+}
+
+.next-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.next-btn button{
+    width: 300px;
+    height: 45px;
+    background-color: orange;
+    border: solid white 1px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+.next-btn button:hover{
+    background-color: var(--btn-hover);
+}
+
+#setup2>div, #login-form>div{
+    margin: 20px;
+}
+
+.email-input input, .password-input input{
+    width: 300px;
+    height: 45px;
+    padding-left: 20px;
+}
+
+
+.inactive{
+    display: none;
+}
+
+
+
+/***setup container end***/
