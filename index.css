@@ -44,7 +44,7 @@ nav select{
     height: 35px;
 }
 
-.sign-up-btn button{
+.sign-in-btn button{
     width: 100px;
     height: 35px;
     background-color: orange;
@@ -55,7 +55,7 @@ nav select{
     transition: all .50s;
 }
 
-.sign-up-btn button:hover{
+.sign-in-btn button:hover{
     background-color: var(--btn-hover);
 }
 
@@ -69,12 +69,14 @@ nav select{
     color: orange;
 }
 
+
+
 @media(max-width:411px) {
     .logo h1{
         font-size: 20px;
     }
 
-    .sign-up-btn button, nav select{
+    .sign-in-btn button, nav select{
         width: 60px;
         height: 25px;
     }
@@ -238,7 +240,85 @@ nav select{
 .inactive{
     display: none;
 }
-
-
-
 /***setup container end***/
+
+
+
+/****sign in page***/
+
+.signIn-container{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/thumb-1920-1322308.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar{
+    width: 100%;
+    height: 35px;
+}
+
+.main-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signIn-box{
+    width: 350px;
+    height: 80%;
+    background: linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7));
+    color: white;
+}
+
+.signin-context-wrapper{
+    width: 100%;
+    text-align: left;
+    padding: 30px 40px 30px 40px;
+}
+
+#signin-form input, .hero-btn button{
+    width: 100%;
+    height: 40px;
+}
+
+#signin-form input{
+    padding-left: 20px;
+}
+
+#signin-form{
+    line-height: 5;
+}
+
+
+.hero-btn button{
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .50s;
+}
+
+.hero-btn button:hover{
+    background-color: var(--btn-hover);
+}
+
+.forgot-password, .remember-me{
+    display: flex;
+    justify-content: center;
+}
+
+.forgot-password a, .signup-link a{
+    color: white;
+    text-decoration: none;
+}
+
+.bottomer{
+    line-height: 2.6;
+}
+

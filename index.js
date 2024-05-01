@@ -1,11 +1,3 @@
-
-getEmailValue();
-function getEmailValue(){
-    const emailInput = document.getElementById("signup-email").value;
-    const reEnterEMail = document.getElementById('re-enter-email');
-    reEnterEMail.value = emailInput;
-};
-
 //slider for signup page
 //select wrappers
 function changeSlide(){
