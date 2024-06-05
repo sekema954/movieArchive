@@ -206,7 +206,7 @@ nav {
 /* overview container */
 .overview {
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/overview-bg.jpeg);
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -383,6 +383,7 @@ nav {
     display: flex;
     justify-content: center;
 }
+
 
 .trailer-btn button{
     width: 120px;

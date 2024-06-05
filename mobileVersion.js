@@ -10,10 +10,8 @@ async function getMobileResults() {
     }
 
     try {
-        console.clear();
         const request = await fetch(url, options);
         const result = await request.json();
-        console.log(result);
 
         // Select and clear movie wrapper
         const movieWrapper = document.querySelector(".movie-card-wrapper"); 
@@ -46,9 +44,8 @@ async function getMobileResults() {
             movieWrapper.appendChild(movieBox);
 
             movieImg.addEventListener('click', () => {
-                // Handle the click event here, for example, display a message
-                console.log(`you clicked on ${movie.title}`)
                 //change movie title
+                console.log(movie);
                 const mainTitle = document.querySelector('.title-fetch');
                 mainTitle.innerHTML = movie.title;
 
@@ -60,7 +57,6 @@ async function getMobileResults() {
                 const dateString = movie.aired.from;
                 const parts = dateString.split("-");
                 const year = parts[0];
-                console.log(`Year: ${year}`);
 
                 //update aired year
                 const airedYear = document.querySelector(".aired-fetch");
@@ -72,27 +68,23 @@ async function getMobileResults() {
                     episodes.innerHTML = "Still releasing."
                 } else {
                     episodes.innerHTML = movie.episodes;
-                    console.log(`This show has ${movie.episodes} episodes.`)
                 };
                
-                
+            
 
 
+                // Watch trailer
+              // Set up the trailer button click event
+              const trailerBtn = document.querySelector('.trailer-fetch');
+              trailerBtn.addEventListener("click", () => {
+                  if (movie.trailer && movie.trailer.embed_url) {
+                      window.open(movie.trailer.embed_url, '_blank'); // Open trailer in a new tab
+                  } else {
+                      alert("Trailer not available");
+                      // Provide feedback to the user that the trailer is not available
+                  }
+              });
 
-                //watch trailer
-                const trailerURL = movie.trailer.embed_url;
-                const trailerBtn = document.querySelector('.trailer-fetch');
-
-                //add click event to trialer btn
-                trailerBtn.addEventListener("click", (event)=>{
-                    event.preventDefault();
-                    if(trailerURL === 'null') {
-                        alert("No trailer links found!");
-                    } else {
-                        window.open(trailerURL, '_blank');
-                        console.log(`You clicked on ${trailerURL}`);
-                    }
-                });
 
                 //change background
                 const posterBg = document.querySelector(".poster-fetch");
