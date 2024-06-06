@@ -68,7 +68,8 @@ async function getResults() {
 
                 // Set up the trailer button click event
                 const trailerBtn = document.querySelector('.trailer-fetch');
-                trailerBtn.addEventListener("click", () => {
+                trailerBtn.addEventListener("click", (event) => {
+                    event.preventDefault();
                     if (movie.trailer && movie.trailer.embed_url) {
                         window.open(movie.trailer.embed_url, '_blank'); // Open trailer in a new tab
                     } else {
@@ -84,3 +85,13 @@ async function getResults() {
     }
 };
 getResults();
+
+
+
+function preventFunction(){
+    const trailerEl = document.getElementById('fetch-trailer');
+    trailerEl.addEventListener('click', (event)=>{
+        event.preventDefault();
+    })
+
+}
