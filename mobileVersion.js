@@ -15,7 +15,6 @@ async function getMobileResults() {
 
         // Select and clear movie wrapper
         const movieWrapper = document.querySelector(".movie-card-wrapper"); 
-        movieWrapper.innerHTML = "";    
         
 
         // Loop over the results and create movie cards for each result

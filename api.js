@@ -92,6 +92,5 @@ function preventFunction(){
     const trailerEl = document.getElementById('fetch-trailer');
     trailerEl.addEventListener('click', (event)=>{
         event.preventDefault();
-    })
-
-}
+    });
+};
