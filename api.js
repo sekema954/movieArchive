@@ -14,7 +14,19 @@ async function getResults() {
         const result = await request.json();
 
         const movieWrapper = document.querySelector(".movie-card-wrapper"); 
-        movieWrapper.innerHTML = "";    
+        movieWrapper.innerHTML = "";   
+
+        const trailerBtn = document.querySelector('.trailer-fetch');
+        trailerBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            const currentMovie = result.data.find(movie => movie.title === document.querySelector('.title-fetch').innerHTML);
+            if (currentMovie.trailer.embed_url) {
+                window.open(currentMovie.trailer.embed_url, '_blank'); // Open trailer in a new tab
+            } else {
+                alert("Trailer not available");
+                // Provide feedback to the user that the trailer is not available
+            }
+        });
 
         for (const movie of result.data) {
             const movieBox = document.createElement('div');
@@ -65,22 +77,12 @@ async function getResults() {
                 overviewContainer.style.backgroundPosition = 'center';
                 overviewContainer.style.backgroundSize = 'cover';
                 overviewContainer.style.backgroundRepeat = 'no-repeat';
-
-                // Set up the trailer button click event
-                const trailerBtn = document.querySelector('.trailer-fetch');
-                trailerBtn.addEventListener("click", () => {
-                    if (movie.trailer && movie.trailer.embed_url) {
-                        window.open(movie.trailer.embed_url, '_blank'); // Open trailer in a new tab
-                    } else {
-                        alert("Trailer not available");
-                        // Provide feedback to the user that the trailer is not available
-                    }
-                });
             });
         }
     } catch(error) {
         console.error(error);
         // Display an error message to the user
     }
-};
+}
+
 getResults();

@@ -106,9 +106,6 @@ nav {
 
 /*media query for mobile devices*/
 @media(max-width:739px){
-    .user-account, .search-input{
-        display: none !important;
-    }
 
     .menu-bar{
         display: inline-block;
@@ -121,6 +118,49 @@ nav {
     }
 }
 
+@media(max-width:540px){
+    .nav-logo h2{
+        font-size: 30px;
+    }
+
+    .search-div{
+        width: 200px !important;
+    }
+
+    .submit-btn{
+        width: 50px !important;
+    }
+}
+
+
+@media(max-width:440px){
+    .nav-logo h2{
+        font-size: 16px;
+    }
+
+    .search-div{
+        width: 200px !important;
+    }
+
+    .submit-btn{
+        width: 50px !important;
+    }
+}
+
+
+@media(max-width:382px){
+    .nav-logo h2{
+        font-size: 13px;
+    }
+
+    .search-div{
+        width: 200px !important;
+    }
+
+    .submit-btn{
+        width: 50px !important;
+    }
+}
 
 
 /*menu bar transition*/
@@ -385,7 +425,7 @@ nav {
 }
 
 
-.trailer-btn button{
+.trailer-fetch{
     width: 120px;
     height: 35px;
     background-color: var(--light-red);
